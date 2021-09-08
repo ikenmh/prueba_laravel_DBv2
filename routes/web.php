@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\User;
+use App\Models\Rol;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $rol = new Rol;
+    echo json_encode(Rol::find(2)->getEndpoints);
 });
+

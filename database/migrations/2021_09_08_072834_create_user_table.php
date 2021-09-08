@@ -14,7 +14,7 @@ class CreateUserTable extends Migration
     public function up()
     {
         Schema::create('user', function (Blueprint $table) {
-            $table->increments("user_id");
+            $table->increments("id");
             $table->string("account",45);
             $table->string("password",45);
             $table->timestamps();

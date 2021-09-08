@@ -14,11 +14,11 @@ class CreateEndpointTable extends Migration
     public function up()
     {
         Schema::create('endpoint', function (Blueprint $table) {
-            $table->increments("endpoint_id");
+            $table->increments("id");
             $table->integer("rol_id")->unsigned();
             $table->string("endpoint_name",100);
             $table->string("route",200);
-            $table->foreign("rol_id")->references("rol_id")->on("rol");
+            $table->foreign("rol_id")->references("id")->on("rol");
             $table->timestamps();
         });
     }

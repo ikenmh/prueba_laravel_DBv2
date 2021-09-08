@@ -16,8 +16,8 @@ class CreateUserHasRolTable extends Migration
         Schema::create('user_has_rol', function (Blueprint $table) {
             $table->integer("user_id")->unsigned();
             $table->integer("rol_id")->unsigned();
-            $table->foreign("user_id")->references("user_id")->on("user");
-            $table->foreign("rol_id")->references("rol_id")->on("rol");
+            $table->foreign("user_id")->references("id")->on("user");
+            $table->foreign("rol_id")->references("id")->on("rol");
             $table->timestamps();
         });
     }
